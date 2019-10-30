@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Model" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Requerimiento_Cabecera">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CañoProceso" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CcodCeCo_Gestor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CcodPrioridad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CcodTipoAdquisicion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CcodTipoMoneda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CnumRequerimiento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DfecRequerimiento" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FtipoCambio" type="xs:double" />
+      <xs:element minOccurs="0" name="IidRequerimiento_Cabecera" type="xs:int" />
+      <xs:element minOccurs="0" name="Tjustificacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tnota" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Requerimiento_Cabecera" nillable="true" type="tns:Requerimiento_Cabecera" />
+  <xs:complexType name="Formulacion_Saldo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CañoProceso" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CcodCeCo_Gestor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CcodClasificador" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CcodFuenteFinanciamiento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CcodPosPre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CcodProyecto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CcodTipoGasto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FimporteComprometido" type="xs:double" />
+      <xs:element minOccurs="0" name="FimporteEjecutado" type="xs:double" />
+      <xs:element minOccurs="0" name="fFormulado" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Formulacion_Saldo" nillable="true" type="tns:Formulacion_Saldo" />
+  <xs:complexType name="Requerimiento_Detalle">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CcodCeCo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CcodClasificador" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CcodComponente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CcodFuenteFinanciamiento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CcodPosPre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CcodProyecto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CcodTipoGasto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FimporteTotal" type="xs:double" />
+      <xs:element minOccurs="0" name="IidRequerimiento_Cabecera" type="xs:int" />
+      <xs:element minOccurs="0" name="IidRequerimiento_Detalle" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Requerimiento_Detalle" nillable="true" type="tns:Requerimiento_Detalle" />
+  <xs:complexType name="Requerimiento_Detalle_Bien">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CcodMaterial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CcodUnidadMedida" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fcantidad" type="xs:double" />
+      <xs:element minOccurs="0" name="FprecioUnitario" type="xs:double" />
+      <xs:element minOccurs="0" name="FprecioUnitario_Extranjero" type="xs:double" />
+      <xs:element minOccurs="0" name="Fstock" type="xs:double" />
+      <xs:element minOccurs="0" name="IidRequerimiento_Detalle" type="xs:int" />
+      <xs:element minOccurs="0" name="IidRequerimiento_Detalle_Bien" type="xs:int" />
+      <xs:element minOccurs="0" name="TespecificacionTecnica" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Requerimiento_Detalle_Bien" nillable="true" type="tns:Requerimiento_Detalle_Bien" />
+  <xs:complexType name="Requerimiento_Detalle_Servicio">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CcodServicio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fprecio" type="xs:double" />
+      <xs:element minOccurs="0" name="Fprecio_Extranjero" type="xs:double" />
+      <xs:element minOccurs="0" name="IidRequerimiento_Detalle" type="xs:int" />
+      <xs:element minOccurs="0" name="IidRequerimiento_Detalle_Servicio" type="xs:int" />
+      <xs:element minOccurs="0" name="TespecificacionTecnica" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Requerimiento_Detalle_Servicio" nillable="true" type="tns:Requerimiento_Detalle_Servicio" />
+  <xs:complexType name="Material">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CcodMaterial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CcodUnidadMedida" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fstock" type="xs:double" />
+      <xs:element minOccurs="0" name="VnomMaterial" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Material" nillable="true" type="tns:Material" />
+  <xs:complexType name="Servicio">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CcodServicio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VnomServicio" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Servicio" nillable="true" type="tns:Servicio" />
+  <xs:complexType name="Usuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bEstado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="cCodEmpleado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cCodTipoEmpleado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="iIdUsuario" type="xs:long" />
+      <xs:element minOccurs="0" name="tClaUsuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tPasUsuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tVecUsuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="vDesEmpleado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="vLogUsuario" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Usuario" nillable="true" type="tns:Usuario" />
+  <xs:complexType name="Empleado">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CCodCargo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CCodCentro" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CCodCentroBeneficio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CCodCentroCosto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CCodCentroGestor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CCodEscalaViaje" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CCodPersonal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CCodTipoEmpleado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CCodZona" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CDni" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cpaso" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Idigito" type="xs:int" />
+      <xs:element minOccurs="0" name="VApePersonal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VDesCargo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VDesTipoEmpleado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VNomCentro" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VNomCentroBeneficio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VNomCentroCosto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VNomCentroGestor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VNomEscalaViaje" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VNomzona" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Empleado" nillable="true" type="tns:Empleado" />
+</xs:schema>

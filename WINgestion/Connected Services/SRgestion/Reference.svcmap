@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="fc9ff8af-34ff-469d-b9a2-0ffb2f1e3ea0" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://aplicacion.amsac.pe/GESTION/WCFgestionE.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WCFgestionE2.xsd" MetadataType="Schema" ID="3d111fd0-58eb-4cf3-9842-dd966c662213" SourceId="1" SourceUrl="http://aplicacion.amsac.pe/GESTION/WCFgestionE.svc?xsd=xsd3" />
+    <MetadataFile FileName="WCFgestionE1.xsd" MetadataType="Schema" ID="01a93ab9-aebc-4029-9450-5a0bd38955c2" SourceId="1" SourceUrl="http://aplicacion.amsac.pe/GESTION/WCFgestionE.svc?xsd=xsd2" />
+    <MetadataFile FileName="WCFgestionE.wsdl" MetadataType="Wsdl" ID="437bb923-8756-46a1-8bb1-f6ab1bd80eee" SourceId="1" SourceUrl="http://aplicacion.amsac.pe/GESTION/WCFgestionE.svc?wsdl" />
+    <MetadataFile FileName="WCFgestionE5.xsd" MetadataType="Schema" ID="745f5940-5b4a-422e-b0c8-c6112c380444" SourceId="1" SourceUrl="http://aplicacion.amsac.pe/GESTION/WCFgestionE.svc?xsd=xsd5" />
+    <MetadataFile FileName="WCFgestionE.disco" MetadataType="Disco" ID="252baea0-a8f7-4ec8-bfef-ba2f3a2a6639" SourceId="1" SourceUrl="http://aplicacion.amsac.pe/GESTION/WCFgestionE.svc?disco" />
+    <MetadataFile FileName="WCFgestionE.xsd" MetadataType="Schema" ID="0e37921a-08a9-454a-9ad0-e55609b0cd55" SourceId="1" SourceUrl="http://aplicacion.amsac.pe/GESTION/WCFgestionE.svc?xsd=xsd1" />
+    <MetadataFile FileName="WCFgestionE4.xsd" MetadataType="Schema" ID="a45167fe-4fd8-4e9b-8322-b00b27914815" SourceId="1" SourceUrl="http://aplicacion.amsac.pe/GESTION/WCFgestionE.svc?xsd=xsd4" />
+    <MetadataFile FileName="WCFgestionE3.xsd" MetadataType="Schema" ID="11f042a9-729e-4796-84c8-e3ebe3190aad" SourceId="1" SourceUrl="http://aplicacion.amsac.pe/GESTION/WCFgestionE.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

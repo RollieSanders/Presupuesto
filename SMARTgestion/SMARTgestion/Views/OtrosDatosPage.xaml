@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SMARTgestion.Views.OtrosDatosPage"
+    BindingContext="{Binding Main, Source={StaticResource Locator}}"
+    Title="Mas Datos"
+    Icon="OtrosDatos">
+    <ContentPage.Content>
+        <ScrollView
+            BindingContext="{Binding Requerimiento}">
+            <StackLayout
+                Padding="10,20,10,5">
+
+                <StackLayout 
+                    BackgroundColor="Yellow">
+                    <Label
+                        FontSize="Small"
+                        HorizontalTextAlignment="Start"
+                        Text="Posición Presupuestal">
+                    </Label>
+                    <Label
+                        FontSize="Micro"
+                        HorizontalTextAlignment="Start"
+                        FontAttributes="Bold"
+                        Text="{Binding Requerimiento.vNomPosPre}">
+                    </Label>
+                </StackLayout>
+
+
+                <StackLayout>
+                    <Label
+                        FontSize="Small"
+                        HorizontalTextAlignment="Start"
+                        Text="Clasificador">
+                    </Label>
+                    <Label
+                        FontSize="Micro"
+                        FontAttributes="Bold"
+                        HorizontalTextAlignment="Start"
+                        Text="{Binding Requerimiento.vNomClasificador}"
+                    TextColor="Black">
+                    </Label>
+                </StackLayout>
+
+                <StackLayout
+                    BackgroundColor="Yellow">
+                    <Label
+                    FontSize="Small"
+                    HorizontalTextAlignment="Start"
+                    Text="Tipo de Gasto">
+                    </Label>
+                    <Label
+                    FontSize="Micro"
+                    HorizontalTextAlignment="Start"
+                    FontAttributes="Bold"
+                    Text="{Binding Requerimiento.vNomClaseGasto}">
+                    </Label>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>

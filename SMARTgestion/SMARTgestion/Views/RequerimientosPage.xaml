@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SMARTgestion.Views.RequerimientosPage"
+    BindingContext="{Binding Main, Source={StaticResource Locator}}"
+    BackgroundColor="Silver"
+    Title="Requerimientos">
+    <ContentPage.Content>
+        <StackLayout
+            BindingContext="{Binding Requerimientos}">
+            <!--<SearchBar
+                BackgroundColor="Silver"
+                Text="{Binding Filter, Mode=TwoWay}"
+                Placeholder="Buscar..."
+                SearchCommand="{Binding SearchCommand}">
+
+            </SearchBar>-->
+            <ListView
+                BackgroundColor="Silver"
+                HasUnevenRows="True"
+                IsPullToRefreshEnabled="True"
+                IsRefreshing="{Binding IsRefreshing, Mode=TwoWay}"
+                ItemsSource="{Binding Requerimientos}"
+                SeparatorVisibility="None"
+                RefreshCommand="{Binding RefreshCommand}">
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame
+                                CornerRadius="20"
+                                Margin="5"
+                                HasShadow="True">
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding SelectRequerimientoCommand}"/>
+                                </Frame.GestureRecognizers>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <StackLayout
+                                    Grid.Column="0"
+                                    VerticalOptions="Center">
+                                        <Label
+                                            FontAttributes="Bold"
+                                            FontSize="Micro"
+                                            Text="{Binding Tnota}"
+                                            TextColor="Black">
+                                        </Label>
+
+
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label
+                                            HorizontalTextAlignment="Start"
+                                            FontSize="Micro"
+                                            Text="{Binding CnumRequerimiento}"
+                                            TextColor="Black">
+                                            </Label>
+                                            <Label
+                                                HorizontalTextAlignment="End"
+                                            FontSize="Small"
+                                            Text="{Binding FimporteTotal, StringFormat=' S/. {0:N2}' }"
+                                            TextColor="Black">
+                                            </Label>
+                                        </StackLayout>
+                                        
+                                    </StackLayout>
+                                    <Image
+                                    Grid.Column="1"
+                                    HorizontalOptions="End"
+                                    Source="ic_chevron_right">
+                                    </Image>
+                                </Grid>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+
+
+
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

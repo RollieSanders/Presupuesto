@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SMARTgestion.Views.LoginPage"
+    BindingContext="{Binding Main, Source={StaticResource Locator}}"
+    Title="Login">
+    <ContentPage.Content>
+        <ScrollView
+            BindingContext="{Binding Login}">
+
+            <StackLayout Padding="10,20,10,5">
+                <!--<Image
+                    Source="LogoAmsacPng"
+                    >
+                </Image>-->
+                <Image
+                    WidthRequest="100"
+                    HeightRequest="100"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Source="LogoAmsacPng"
+                />
+
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="Large"
+                    HorizontalOptions="Center"
+                    Text="Autentificación">
+                </Label>
+                <Label
+                    Text="Usuario">
+                </Label>
+                <Entry
+                    Text="{Binding Usuario, Mode=TwoWay}"
+                    Placeholder="Ingrese el Usuario...">
+                </Entry>
+                <Label
+                    Text="Contraseña">
+                </Label>
+                <Entry
+                    Text="{Binding Password, Mode=TwoWay}"
+                    IsPassword="True"
+                    Placeholder="Ingrese la Contraseña...">
+                </Entry>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Recordar Usuario"></Label>
+                    <Switch 
+                        IsToggled="{Binding IsRemember, Mode=TwoWay}">
+                    </Switch>
+                </StackLayout>
+                <ActivityIndicator
+                    IsRunning="{Binding IsRunning, Mode=TwoWay}">
+                </ActivityIndicator>
+                <Button
+                    BackgroundColor="Navy"
+                    BorderRadius="23"
+                    Command="{Binding LoginCommand}"
+                    HeightRequest="46"
+                    IsEnabled="{Binding IsEnabled, Mode=TwoWay}"
+                    Text="Aceptar"                        
+                    TextColor="White"
+                    >
+                </Button>
+                <StackLayout
+                        HorizontalOptions="Center"
+                        Orientation="Horizontal"
+                        VerticalOptions="EndAndExpand"
+                        >
+                    <!--<Image 
+                        Source="facebook" 
+                        WidthRequest="40">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding LoginFacebookCommand}"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Image Source="twiter" WidthRequest="40"></Image>
+                    <Image Source="instagram" WidthRequest="40"></Image>-->
+
+                </StackLayout>
+
+            </StackLayout>
+
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>

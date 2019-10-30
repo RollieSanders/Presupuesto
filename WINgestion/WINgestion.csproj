@@ -1,0 +1,842 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7DC0D5CD-DF53-47EC-B948-0305B2BA8BB9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WINgestion</RootNamespace>
+    <AssemblyName>WINgestion</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>D:\16_Aplicaciones\Sistemas\Presupuesto\publicacion\pGestion\App\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://aplicacion.amsac.pe/pGestion/</InstallUrl>
+    <ProductName>GESTION</ProductName>
+    <PublisherName>AMSAC</PublisherName>
+    <SuiteName>GESTION PRESUPUESTAL</SuiteName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <TrustUrlParameters>true</TrustUrlParameters>
+    <ApplicationRevision>16</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>true</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsLocation>Relative</BootstrapperComponentsLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>9D86293E32E6E0645569764B02F908B320408535</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>WINgestion_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>LogoAmsacIco.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Design, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.TemplateEngine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v18.2.Core, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v18.2.UI, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v18.2.Core, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v18.2.Core, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v18.2.Core, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Spreadsheet.v18.2.Core, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v18.2.UI, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraLayout.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraSpreadsheet.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="FN.FrameWork.Componentes">
+      <HintPath>..\..\dll\FN.FrameWork.Componentes.dll</HintPath>
+    </Reference>
+    <Reference Include="gnGroupControl">
+      <HintPath>..\..\dll\gnGroupControl.dll</HintPath>
+    </Reference>
+    <Reference Include="gnUserControl">
+      <HintPath>..\..\dll\gnUserControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Excel.v8.1, Version=8.1.20081.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dll\Infragistics\Infragistics2.Excel.v8.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Shared.v8.1, Version=8.1.20081.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dll\Infragistics\Infragistics2.Shared.v8.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.AppStylistSupport.v8.1, Version=8.1.20081.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dll\Infragistics\Infragistics2.Win.AppStylistSupport.v8.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.Misc.v8.1, Version=8.1.20081.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dll\Infragistics\Infragistics2.Win.Misc.v8.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.SupportDialogs.v8.1, Version=8.1.20081.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dll\Infragistics\Infragistics2.Win.SupportDialogs.v8.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraChart.v8.1.Design, Version=8.1.20081.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dll\Infragistics\Infragistics2.Win.UltraChart.v8.1.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraGauge.v8.1.Design, Version=8.1.20081.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dll\Infragistics\Infragistics2.Win.UltraGauge.v8.1.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinCalcManager.v8.1, Version=8.1.20081.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dll\Infragistics\Infragistics2.Win.UltraWinCalcManager.v8.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinCalcManager.v8.1.FormulaBuilder, Version=8.1.20081.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dll\Infragistics\Infragistics2.Win.UltraWinCalcManager.v8.1.FormulaBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinChart.v8.1, Version=8.1.20081.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dll\Infragistics\Infragistics2.Win.UltraWinChart.v8.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinDataSource.v8.1, Version=8.1.20081.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dll\Infragistics\Infragistics2.Win.UltraWinDataSource.v8.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinDock.v8.1, Version=8.1.20081.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dll\Infragistics\Infragistics2.Win.UltraWinDock.v8.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinEditors.v8.1, Version=8.1.20081.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dll\Infragistics\Infragistics2.Win.UltraWinEditors.v8.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinExplorerBar.v8.1, Version=8.1.20081.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dll\Infragistics\Infragistics2.Win.UltraWinExplorerBar.v8.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinGauge.v8.1, Version=8.1.20081.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dll\Infragistics\Infragistics2.Win.UltraWinGauge.v8.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinGrid.DocumentExport.v8.1, Version=8.1.20081.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dll\Infragistics\Infragistics2.Win.UltraWinGrid.DocumentExport.v8.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinGrid.ExcelExport.v8.1, Version=8.1.20081.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dll\Infragistics\Infragistics2.Win.UltraWinGrid.ExcelExport.v8.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinGrid.v8.1, Version=8.1.20081.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dll\Infragistics\Infragistics2.Win.UltraWinGrid.v8.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinInkProvider.Ink17.v8.1, Version=8.1.20081.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dll\Infragistics\Infragistics2.Win.UltraWinInkProvider.Ink17.v8.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinInkProvider.v8.1, Version=8.1.20081.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dll\Infragistics\Infragistics2.Win.UltraWinInkProvider.v8.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinListBar.v8.1, Version=8.1.20081.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dll\Infragistics\Infragistics2.Win.UltraWinListBar.v8.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinListView.v8.1, Version=8.1.20081.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dll\Infragistics\Infragistics2.Win.UltraWinListView.v8.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinMaskedEdit.v8.1, Version=8.1.20081.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dll\Infragistics\Infragistics2.Win.UltraWinMaskedEdit.v8.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinPrintPreviewDialog.v8.1, Version=8.1.20081.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dll\Infragistics\Infragistics2.Win.UltraWinPrintPreviewDialog.v8.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinSchedule.v8.1, Version=8.1.20081.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dll\Infragistics\Infragistics2.Win.UltraWinSchedule.v8.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinSpellChecker.v8.1, Version=8.1.20081.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dll\Infragistics\Infragistics2.Win.UltraWinSpellChecker.v8.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinStatusBar.v8.1, Version=8.1.20081.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dll\Infragistics\Infragistics2.Win.UltraWinStatusBar.v8.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinTabbedMdi.v8.1, Version=8.1.20081.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dll\Infragistics\Infragistics2.Win.UltraWinTabbedMdi.v8.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinTabControl.v8.1, Version=8.1.20081.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dll\Infragistics\Infragistics2.Win.UltraWinTabControl.v8.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinToolbars.v8.1, Version=8.1.20081.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dll\Infragistics\Infragistics2.Win.UltraWinToolbars.v8.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinTree.v8.1, Version=8.1.20081.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dll\Infragistics\Infragistics2.Win.UltraWinTree.v8.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.v8.1, Version=8.1.20081.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dll\Infragistics\Infragistics2.Win.v8.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.v8.1.Design, Version=8.1.20081.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dll\Infragistics\Infragistics2.Win.v8.1.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ayuda\Frm_Formulacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ayuda\Frm_Formulacion.designer.cs">
+      <DependentUpon>Frm_Formulacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configuracion\MyStuff.cs" />
+    <Compile Include="Connected Services\SRgestion\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Formato\CrystalReport\CR_Requerimiento_Bien.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_Requerimiento_Bien.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formato\CrystalReport\CR_Requerimiento_Servicio.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_Requerimiento_Servicio.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formato\DataSet\Ds_Requerimiento.cs">
+      <DependentUpon>Ds_Requerimiento.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formato\DataSet\Ds_Requerimiento.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ds_Requerimiento.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\Frm_Login.designer.cs">
+      <DependentUpon>Frm_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Movimiento\Frm_ActualizaRequerimiento_Nuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Movimiento\Frm_ActualizaRequerimiento_Nuevo.Designer.cs">
+      <DependentUpon>Frm_ActualizaRequerimiento_Nuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Movimiento\Frm_ActualizaRequerimiento_Nuevo_D.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Movimiento\Frm_ActualizaRequerimiento_Nuevo_D.Designer.cs">
+      <DependentUpon>Frm_ActualizaRequerimiento_Nuevo_D.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Movimiento\Frm_FirmaRequerimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Movimiento\Frm_FirmaRequerimiento.Designer.cs">
+      <DependentUpon>Frm_FirmaRequerimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Movimiento\Frm_ListaRequerimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Movimiento\Frm_ListaRequerimiento.Designer.cs">
+      <DependentUpon>Frm_ListaRequerimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Movimiento\Frm_Requerimientos_Comprometidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Movimiento\Frm_Requerimientos_Comprometidos.designer.cs">
+      <DependentUpon>Frm_Requerimientos_Comprometidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Movimiento\Frm_Requerimientos_Ejecutados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Movimiento\Frm_Requerimientos_Ejecutados.designer.cs">
+      <DependentUpon>Frm_Requerimientos_Ejecutados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Principal\Frm_Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reporte\Frm_ConsultaSaldos_CentroCosto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte\Frm_ConsultaSaldos_CentroCosto.Designer.cs">
+      <DependentUpon>Frm_ConsultaSaldos_CentroCosto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte\Frm_ConsultaSaldos_CentroCosto_Comprometidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte\Frm_ConsultaSaldos_CentroCosto_Comprometidos.designer.cs">
+      <DependentUpon>Frm_ConsultaSaldos_CentroCosto_Comprometidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte\Frm_ConsultaSaldos_CentroCosto_Disponible.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte\Frm_ConsultaSaldos_CentroCosto_Disponible.designer.cs">
+      <DependentUpon>Frm_ConsultaSaldos_CentroCosto_Disponible.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte\Frm_ConsultaSaldos_CentroCosto_Ejecutados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte\Frm_ConsultaSaldos_CentroCosto_Ejecutados.designer.cs">
+      <DependentUpon>Frm_ConsultaSaldos_CentroCosto_Ejecutados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte\Frm_ConsultaSaldos_CentroCosto_Formulado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte\Frm_ConsultaSaldos_CentroCosto_Formulado.designer.cs">
+      <DependentUpon>Frm_ConsultaSaldos_CentroCosto_Formulado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte\Frm_ConsultaSaldos_Proyecto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte\Frm_ConsultaSaldos_Proyecto.designer.cs">
+      <DependentUpon>Frm_ConsultaSaldos_Proyecto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte\Frm_ConsultaSaldos_Proyecto_Comprometidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte\Frm_ConsultaSaldos_Proyecto_Comprometidos.designer.cs">
+      <DependentUpon>Frm_ConsultaSaldos_Proyecto_Comprometidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte\Frm_ConsultaSaldos_Proyecto_Disponible.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte\Frm_ConsultaSaldos_Proyecto_Disponible.designer.cs">
+      <DependentUpon>Frm_ConsultaSaldos_Proyecto_Disponible.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte\Frm_ConsultaSaldos_Proyecto_Ejecutados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte\Frm_ConsultaSaldos_Proyecto_Ejecutados.designer.cs">
+      <DependentUpon>Frm_ConsultaSaldos_Proyecto_Ejecutados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte\Frm_ConsultaSaldos_Proyecto_Formulado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte\Frm_ConsultaSaldos_Proyecto_Formulado.designer.cs">
+      <DependentUpon>Frm_ConsultaSaldos_Proyecto_Formulado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte\Frm_Reporte_Formato4E.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte\Frm_Reporte_Formato4E.designer.cs">
+      <DependentUpon>Frm_Reporte_Formato4E.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte\Frm_Requerimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte\Frm_Requerimiento.Designer.cs">
+      <DependentUpon>Frm_Requerimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte\WaitForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte\WaitForm1.Designer.cs">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Servicios\Framework.cs" />
+    <Content Include="LogoAmsacIco.ico" />
+    <EmbeddedResource Include="Ayuda\Frm_Formulacion.resx">
+      <DependentUpon>Frm_Formulacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formato\CrystalReport\CR_Requerimiento_Bien.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_Requerimiento_Bien.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formato\CrystalReport\CR_Requerimiento_Servicio.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_Requerimiento_Servicio.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\Frm_Login.resx">
+      <DependentUpon>Frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Movimiento\Frm_ActualizaRequerimiento_Nuevo.resx">
+      <DependentUpon>Frm_ActualizaRequerimiento_Nuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Movimiento\Frm_ActualizaRequerimiento_Nuevo_D.resx">
+      <DependentUpon>Frm_ActualizaRequerimiento_Nuevo_D.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Movimiento\Frm_FirmaRequerimiento.resx">
+      <DependentUpon>Frm_FirmaRequerimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Movimiento\Frm_ListaRequerimiento.resx">
+      <DependentUpon>Frm_ListaRequerimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Movimiento\Frm_Requerimientos_Comprometidos.resx">
+      <DependentUpon>Frm_Requerimientos_Comprometidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Movimiento\Frm_Requerimientos_Ejecutados.resx">
+      <DependentUpon>Frm_Requerimientos_Ejecutados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal\Frm_Principal.resx">
+      <DependentUpon>Frm_Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reporte\Frm_ConsultaSaldos_CentroCosto.resx">
+      <DependentUpon>Frm_ConsultaSaldos_CentroCosto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte\Frm_ConsultaSaldos_CentroCosto_Comprometidos.resx">
+      <DependentUpon>Frm_ConsultaSaldos_CentroCosto_Comprometidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte\Frm_ConsultaSaldos_CentroCosto_Disponible.resx">
+      <DependentUpon>Frm_ConsultaSaldos_CentroCosto_Disponible.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte\Frm_ConsultaSaldos_CentroCosto_Ejecutados.resx">
+      <DependentUpon>Frm_ConsultaSaldos_CentroCosto_Ejecutados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte\Frm_ConsultaSaldos_CentroCosto_Formulado.resx">
+      <DependentUpon>Frm_ConsultaSaldos_CentroCosto_Formulado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte\Frm_ConsultaSaldos_Proyecto.resx">
+      <DependentUpon>Frm_ConsultaSaldos_Proyecto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte\Frm_ConsultaSaldos_Proyecto_Comprometidos.resx">
+      <DependentUpon>Frm_ConsultaSaldos_Proyecto_Comprometidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte\Frm_ConsultaSaldos_Proyecto_Disponible.resx">
+      <DependentUpon>Frm_ConsultaSaldos_Proyecto_Disponible.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte\Frm_ConsultaSaldos_Proyecto_Ejecutados.resx">
+      <DependentUpon>Frm_ConsultaSaldos_Proyecto_Ejecutados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte\Frm_ConsultaSaldos_Proyecto_Formulado.resx">
+      <DependentUpon>Frm_ConsultaSaldos_Proyecto_Formulado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte\Frm_Reporte_Formato4E.resx">
+      <DependentUpon>Frm_Reporte_Formato4E.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte\Frm_Requerimiento.resx">
+      <DependentUpon>Frm_Requerimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte\WaitForm1.resx">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Connected Services\SRgestion\WCFgestionE.wsdl" />
+    <None Include="Connected Services\SRgestion\WCFgestionE.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SRgestion\WCFgestionE1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SRgestion\WCFgestionE2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SRgestion\WCFgestionE3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SRgestion\WCFgestionE4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SRgestion\WCFgestionE5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SRgestion\WINgestion.SRgestion.RequerimientoWCF.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <Content Include="Excel\Formato4E.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Formato\DataSet\Ds_Requerimiento.xsc">
+      <DependentUpon>Ds_Requerimiento.xsd</DependentUpon>
+    </None>
+    <None Include="Formato\DataSet\Ds_Requerimiento.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Ds_Requerimiento.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Formato\DataSet\Ds_Requerimiento.xss">
+      <DependentUpon>Ds_Requerimiento.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\Model.Empleado.datasource" />
+    <None Include="Properties\DataSources\Model.Formulacion_Saldo.datasource" />
+    <None Include="Properties\DataSources\Model.Material.datasource" />
+    <None Include="Properties\DataSources\Model.Requerimiento.datasource" />
+    <None Include="Properties\DataSources\Model.Requerimiento_Cabecera.datasource" />
+    <None Include="Properties\DataSources\Model.Requerimiento_Detalle.datasource" />
+    <None Include="Properties\DataSources\Model.Requerimiento_Detalle_Bien.datasource" />
+    <None Include="Properties\DataSources\Model.Requerimiento_Detalle_Servicio.datasource" />
+    <None Include="Properties\DataSources\Model.Servicio.datasource" />
+    <None Include="Properties\DataSources\Model.Usuario.datasource" />
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Properties\DataSources\System.Data.DataTable.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="WINgestion_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{da044849-bb18-4108-816b-ecac7834830b}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Service\Service.csproj">
+      <Project>{db42bcaf-58bc-4e58-9408-0f6e0c1569f0}</Project>
+      <Name>Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\024-busqueda-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\024-busqueda-11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\040-error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\041-interfaz-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aceptar_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\acroread.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ActualizarVersion32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Anulado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aperturar_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aperturar_02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Buscar32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calcular32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendario_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancelar_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Casa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ceco32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CecoProyecto32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerrar_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerrar_02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cerrar32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart_gray_bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clave_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CLIP-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CLOSE.BMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corona.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\db.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\del_Documento.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\del_Documento1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Detalle32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Distribuir32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-find.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Eliminar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Eliminar_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Eliminar32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\elorload.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Empleado32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\esfera_ambar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\esfera_roja.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\esfera_verde.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Excel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exportar_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filtrodatos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Financiamiento32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Formulacion32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\genesis.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grabar_salir.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grabaRegistro.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Guardar_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Guardar32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imprimir32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Interno32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inversion32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lista_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lista32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ListaPendiente32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\llave-01.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\llaves.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoginAmsac.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoAM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mod_Documento.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mod_Documento1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nuevo_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nuevo32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paquete_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pasos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Proyecto32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ReporteCeco32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ReporteProyecto32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Saldo32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Searche_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tarea32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Undo_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Usuario_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\SRgestion\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SRgestion\WCFgestionE.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SRgestion\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SRgestion\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SRgestion\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="SAP.CrystalReports14.NET.2.0">
+      <Visible>False</Visible>
+      <ProductName>SAP Crystal Reports Runtime Engine for .NET Framework</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SMARTgestion.Views.RequerimientoPage"
+    BindingContext="{Binding Main, Source={StaticResource Locator}}"
+    Title="Información"
+    Icon="Requerimiento">
+    <ContentPage.Content>
+        <ScrollView
+            BindingContext="{Binding Requerimiento}">
+            <StackLayout
+                Padding="10,20,10,5">
+                
+                <StackLayout 
+                    BackgroundColor="Yellow">
+                    <Label
+                        FontSize="Small"
+                        HorizontalTextAlignment="Start"
+                        Text="Requerimiento">
+                    </Label>
+                    <Label
+                        FontSize="Micro"
+                        HorizontalTextAlignment="Start"
+                        FontAttributes="Bold"
+                        Text="{Binding Requerimiento.CnumRequerimiento}">
+                    </Label>
+                </StackLayout>
+
+                <StackLayout>
+                    <Label
+                        FontSize="Small"
+                        HorizontalTextAlignment="Start"
+                        Text="Importe">
+                    </Label>
+                    <Label
+                        FontSize="Micro"
+                        HorizontalTextAlignment="Start"
+                        FontAttributes="Bold"
+                        Text="{Binding Requerimiento.FimporteTotal, StringFormat='S/. {0:N2}' }">
+                    </Label>
+                </StackLayout>
+
+                <StackLayout 
+                    BackgroundColor="Yellow">
+                    <Label
+                        FontSize="Small"
+                        HorizontalTextAlignment="Start"
+                        Text="F.Financiamiento">
+                    </Label>
+                    <Label
+                        FontSize="Micro"
+                        HorizontalTextAlignment="Start"
+                        FontAttributes="Bold"
+                        Text="{Binding Requerimiento.vNomFuenteFinanciamiento}">
+                    </Label>
+                </StackLayout>
+
+
+                <StackLayout>
+                    <Label
+                        FontSize="Small"
+                        HorizontalTextAlignment="Start"
+                        Text="Centro Costo">
+                    </Label>
+                    <Label
+                        FontSize="Micro"
+                        FontAttributes="Bold"
+                        HorizontalTextAlignment="Start"
+                        Text="{Binding Requerimiento.vNomCeCo}"
+                    TextColor="Black">
+                    </Label>
+                </StackLayout>
+
+                <StackLayout
+                    BackgroundColor="Yellow">
+                    <Label
+                    FontSize="Small"
+                    HorizontalTextAlignment="Start"
+                    Text="Proyecto">
+                    </Label>
+                    <Label
+                    FontSize="Micro"
+                    HorizontalTextAlignment="Start"
+                    FontAttributes="Bold"
+                    Text="{Binding Requerimiento.vNomCortoProyecto}">
+                    </Label>
+                </StackLayout>
+
+                
+                
+                <Button
+                    BackgroundColor="Navy"
+                    BorderRadius="23"
+                    Command="{Binding FirmaCommand}"
+                    HeightRequest="46"
+                    IsEnabled="{Binding IsEnabled, Mode=TwoWay}"
+                    Text="Firmar Requerimiento"                        
+                    TextColor="White"
+                    VerticalOptions="EndAndExpand"
+                    >
+                </Button>
+
+            </StackLayout>
+        </ScrollView>
+        
+    </ContentPage.Content>
+</ContentPage>
